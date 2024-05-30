@@ -12,19 +12,43 @@
     <h1>Project 주제 소개</h1>
     <hr>
     <ul class="nav flex-column">
-        <h4>소개</h4>
+        <h4>‘다쉐린 가이드’ 프로젝트는 내가 사는 지역인 고양시의 맛집을 소개하는 웹페이지를 제작하는 프로젝트이다. 직접 방문했던 음식점들의 상세한 리뷰와 대표 메뉴 소개를 중심으로, 카페, 식당, 주점 카테고리로 나누어 지역 내 숨겨진 맛집들을 소개한다. 이 프로젝트는 고양시 주민들과 방문객들에게 유용할 만한 식도락 가이드를 제공하는 것을 목표로 하고 있다.
+        </h4>
     </ul>
     <div class="container mt-3">
     <h1>Project 바로가기</h1>
     <hr>
     <ul class="nav flex-column">
-        <li class="pb-3"><a href="#">주제 선정</a> <span class="badge bg-danger">제출예정</span></li>
+        <button type="button" class="pb-3" onclick="location.href='main.html'">최종 프로젝트</button>
     </ul>
     <div class="container mt-3">
     <h1>Progress Status</h1>
     <hr>
     <ul class="nav flex-column">
-        <li class="pb-3"><a href="#"></a> <span class="badge bg-danger">제출예정</span></li>
+        <table id="task-table">
+            <tr>
+                <th>Date</th>
+                <th>Task</th>
+                <th>Status</th>
+            </tr>
+            <!-- 여기에 JavaScript를 사용하여 동적으로 행을 추가할 예정입니다. -->
+        </table>
+        
+        <button onclick="addRow()">행 추가</button>
+
+        <script>
+            function addRow() {
+                var table = document.getElementById('task-table');
+                var newRow = table.insertRow(-1);
+                var cells = ["Date", "Task Description", "Status"];
+        
+                cells.forEach(function(cellData) {
+                    var newCell = newRow.insertCell();
+                    var newText = document.createTextNode(prompt("Enter " + cellData));
+                    newCell.appendChild(newText);
+                });
+            }
+        </script>
     </ul>
 </div>
 </body>
