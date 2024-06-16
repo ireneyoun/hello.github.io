@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'SokchoBadaDotum';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name a {
+    font-size: 24px;
+    color: #F24B2A;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul a {
+    font-size: 15px;
+    color: #F24B2A;
+    text-decoration: none;
+    display: flex;
+}
+
+.menu {
+    font-size: 15px;
+    color: #F24B2A;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu-content {
+    display: none;
+}
+
+nav:hover .menu-content {
+    display: flex;
+    padding: 10px;
+}
+
+.menu-category ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav:hover .menu {
+    display: none;
+}
+
+.introduce {
+    font-size: 50px;
+    color: #F24B2A;
+}
+
+main {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.email, .myname {
+    font-size: 15px;
+    color: #F24B2A;
+    text-decoration: none;
+}
+
+#korean {
+    font-family: 'WAGURITTF';
+}
+
+.introMenu a {
+    font-size: 24px;
+    color: #F24B2A;
+    text-align: center;
+    padding: 100px;
+}
+
+.intro-menu {
+    padding: 0 auto;
+}
+
+.introMenu {
+    padding-top: 40px;
+}
+
+.introContent {
+    font-size: 24px;
+    color: black;
+    padding: 15px;
+}

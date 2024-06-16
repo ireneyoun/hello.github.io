@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pia Quinn Portfolio</title>
-    <link rel="stylesheet" href="testcss.css">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 </style>
@@ -13,24 +13,63 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="name">The Dachelin Guide</h1>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cafe.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="restaurant.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav>
-            <a href="mailto:hello@pia-quinn.com" class="email">menu</a>
-        </nav>
         <main>
-            <h2 class="portfolio">Savor Every Bite, <br> Enjoy Local Delight</h2>
-            <img src="your-image-path.jpg" alt="Pia Quinn with camera" class="profile-image">
-            <div class="info">
-                <p id="korean">안녕하세요안녕하세요</p>
-                <p id="korean">고양시 맛집 식당 소개 사이트</p>
-                <p class="signature">PIA QUINN<br>Stylist & Creative Director</p>
+            <h1 class="introduce">Savor Every Bite, <br> Enjoy Local Delight</h1>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="시이즈3.png" alt="image1">
+                    <img src="별미감자탕2.jpeg" alt="image2">
+                    <img src="요리미치훈.jpeg" alt="image3">
+                    <img src="플레이그라운드브루어리.jpeg" alt="image4">
+                    <img src="동경소나기.jpeg" alt="image5">
+                    <img src="베럴커피2.png" alt="image6">
+                    <img src="짬뽕인2.jpeg" alt="image7">
+                    <img src="포폴로피자.png" alt="image8">
+                </div>
             </div>
         </main>
         <footer>
-            <a href="#" class="info-link">dsyoun@gmail.com</a>
-            <a href="#" class="works-link">Select Works</a>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
         </footer>
     </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+        const slideWidth = slides[0].clientWidth;
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const offset = -currentIndex * slideWidth;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}px)`;
+
+            if (currentIndex === totalSlides - 4) {
+                setTimeout(() => {
+                    currentIndex = 0;
+                    updateSlide();
+                }, 3000);
+            }
+        }
+
+        setInterval(nextSlide, 3000);
+    </script>
 </body>
 </html>
