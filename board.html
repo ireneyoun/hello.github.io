@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cafe.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="restaurant.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="login-menu">
+            <div class="login">
+                <div class="logout-section">
+                    <div id="usernameDisplay"></div>
+                    <button id="logoutButton">Logout</button>
+                </div>
+                <div id="usernameDisplay"></div>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="board-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Rating</th>
+                            <th>Username</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="korean">포폴로피자</td>
+                            <td class="clicktitle" id="korean">너무 맛있어요!</td>
+                            <td id="korean"><span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                            <td id="korean">noonsong12</td>
+                            <td id="korean">24.05.23</td>
+                        </tr>
+                        <tr>
+                            <td id="korean">플레이그라운드</br>브루어리 탭하우스</td>
+                            <td class="clicktitle" id="korean">지금 날씨에 가기 딱 좋아요</td>
+                            <td id="korean"><span class="star">&#9733;&#9733;&#9733;</span></td>
+                            <td id="korean">jane89</td>
+                            <td id="korean">24.04.14</td>
+                        </tr>
+                        <tr>
+                            <td id="korean">별미감자탕</td>
+                            <td class="clicktitle" id="korean">가좌마을 최고 맛집~</td>
+                            <td id="korean"><span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                            <td id="korean">eatfunfun56</td>
+                            <td id="korean">24.04.02</td>
+                        </tr>
+                        <tr>
+                            <td id="korean">짬뽕인</td>
+                            <td class="clicktitle" id="korean">탕수육 완전 맛있어요</td>
+                            <td id="korean"><span class="star">&#9733;&#9733;&#9733;&#9733;</span></td>
+                            <td id="korean">ohmygod</td>
+                            <td id="korean">24.03.15</td>
+                        </tr>
+                        <tr>
+                            <td id="korean">시이즈</td>
+                            <td class="clicktitle" id="korean">분위기가 좋아요!</td>
+                            <td id="korean"><span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                            <td id="korean">korea123</td>
+                            <td id="korean">24.02.01</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="board-buttons">
+                    <button id="writeButton" onclick="window.location.href='boardwrite.html'">Write</button>
+                    <button id="nextButton">Next</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -26,6 +26,11 @@ body {
     color: #000;
 }
 
+button {
+    font-family: 'Oswald', sans-serif;
+    line-height: 5px;
+}
+
 .container {
     width: 100%;
     text-align: center;
@@ -153,5 +158,128 @@ footer {
 .introContent {
     font-size: 24px;
     color: black;
+    padding: 25px;
+}
+
+.PageintroContent {
+    font-size: 16px;
+    color: black;
     padding: 15px;
+}
+
+.PageintroContent h2 {
+    font-size: 30px;
+    color:#F24B2A;
+}
+
+.login label {
+    font-size: 16px;
+    color: black;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.login button {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: #45a049;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+#logoutButton {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: #d32f2f;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+}
+
+#logoutButton:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+#usernameDisplay {
+    font-size: 18px;
+    display: none;
+}
+
+.logout-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.board-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.board-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.board-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    color:#F24B2A;
+}
+
+.clicktitle:hover {
+    color:#F24B2A;
+    cursor: pointer;
+}
+
+.board-buttons button:hover {
+    background-color:#F24B2A;
+    color: white;
+}
+
+.star {
+    color:#F24B2A;
+    font-size: 15px;
 }
