@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="cafe-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cis.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="pizza.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="cafe-menu">
+            <div class="cafeMenu">
+                <a id="korean" href="cis.html" style=" text-decoration: none;">시이즈</a></br>
+                <a id="korean" href="bettercoffee.html" style="color: #45a049; text-decoration: none;">베럴커피</a>
+            </div>
+            <div class="better-Content">
+                <div id="bettercoffee-map"></div>
+                <div class="better-text">
+                    </br></br>
+                    <a id="korean">better coffee</br>베럴커피</br></br>open 09:00</br>close 23:00</br></a>
+                    <a id="korean" href="https://www.instagram.com/better.coffee_gajwa/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
+                    <a id="korean" href="https://naver.me/5JJbAR4E" style="color: #F24B2A; text-decoration: none;">naver place</a>
+                </div>
+            </div>
+            <span id="korean" style="font-size: 13.5px;">베럴커피는 제가 사는 동네에 위치한 카페입니다. 베럴커피의 시그니처 메뉴는 아인슈페너와 베럴크림라테인데요. 이들에 올라가는 크림이 매우 쫀득한 것이 특징이에요. 크림을 단단하게 만들기 위해서는 아주 오랜 시간 저어야 하는데, 베럴커피는 갈 때마다 크림이 무른 적이 없었습니다. 또, 베럴커피에서는 다양한 구움과자들도 팔고 있어요. 저희 동네의 자랑입니다.</span>
+        </main>
+        <footer>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
+        </footer>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc"></script>
+        <script>
+            // Google Maps API 초기화 함수
+            function initMap() {
+                // 초기 위치 설정 (위도와 경도)
+                var myLatLng = {lat: 37.686151, lng: 126.719474};
+
+                // 지도 생성 및 센터 설정
+                var map = new google.maps.Map(document.getElementById('bettercoffee-map'), {
+                    center: myLatLng,
+                    zoom: 18 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                });
+
+                // 마커 생성
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: '베럴커피' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                });
+
+                infowindow = new google.maps.InfoWindow({
+                    content: '<strong>베럴커피</strong><br>경기도 고양시 일산서구</br>가좌동 번지 1층 394-9 01호'
+                });
+
+                marker.addListener('mouseover', function() {
+                    infowindow.open(map, marker);
+                });
+
+                // 마커에 이벤트 리스너 추가 (마우스 아웃 시)
+                marker.addListener('mouseout', function() {
+                    infowindow.close();
+                });
+            } 
+        </script>
+        <!-- Google Maps 초기화 -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc&callback=initMap">
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="cafe-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cis.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="pizza.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="cafe-menu">
+            <div class="cafeMenu">
+                <a id="korean" href="cis.html" style="color: #45a049; text-decoration: none;">시이즈</a></br>
+                <a id="korean" href="bettercoffee.html" style="text-decoration: none;">베럴커피</a>
+            </div>
+            <div class="cis-Content">
+                <div class="cis-text">
+                    </br></br>
+                    <a id="korean">c.is 시이즈</br></br>open 10:00</br>close 21:00</br></a>
+                    <a id="korean" href="https://www.instagram.com/cafe_c.is/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
+                    <a id="korean" href="https://naver.me/5h3E2swv" style="color: #F24B2A; text-decoration: none;">naver place</a>
+                </div>
+                <div class="arch-image">
+                    <img src="cis2.jpeg" alt="cis2">
+                </div>
+                <div id="cis-map"></div>
+            </div>
+            <span id="korean" style="font-size: 13.5px;">시이즈는 번화가와는 조금 떨어져 있는 곳에 위치한 작은 카페입니다. 대표 메뉴인 아몬드슈페너와 핑크솔트슈페너는 다른 카페에서는 쉽게 찾아볼 수 없어요. 고소한 커피 위에 달콤한 크림을 올려 부드러운 조화를 맛볼 수 있습니다. 대표 메뉴는 아니지만 제가 개인적으로 추천하는 메뉴는 로얄밀크티쉐이크인데, 밀크티의 맛과 향이 아주 진해서 밀크티를 좋아하시는 분들은 꼭 도전해 보셨으면 좋겠습니다!</span>
+        </main>
+        <footer>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
+        </footer>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc"></script>
+        <script>
+            // Google Maps API 초기화 함수
+            function initMap() {
+                // 초기 위치 설정 (위도와 경도)
+                var myLatLng = {lat: 37.683200, lng: 126.754848};
+
+                // 지도 생성 및 센터 설정
+                var map = new google.maps.Map(document.getElementById('cis-map'), {
+                    center: myLatLng,
+                    zoom: 15 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                });
+
+                // 마커 생성
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: '시이즈' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                });
+
+                infowindow = new google.maps.InfoWindow({
+                    content: '<strong>시이즈</strong><br>경기도 고양시 일산서구</br>성저로38번길 53'
+                });
+
+                marker.addListener('mouseover', function() {
+                    infowindow.open(map, marker);
+                });
+
+                // 마커에 이벤트 리스너 추가 (마우스 아웃 시)
+                marker.addListener('mouseout', function() {
+                    infowindow.close();
+                });
+            } 
+        </script>
+        <!-- Google Maps 초기화 -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc&callback=initMap">
+        </script>
+    </div>
+</body>
+</html>

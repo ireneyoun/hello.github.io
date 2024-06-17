@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="cafe-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cis.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="pizza.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="res-menu">
+            <div class="resMenu">
+                <a id="korean" href="pizza.html" style="color: #45a049; text-decoration: none;">포폴로피자</a></br>
+                <a id="korean" href="gamja.html" style="text-decoration: none;">별미감자탕</a></br>
+                <a id="korean" href="jjambbong.html" style="text-decoration: none;">짬뽕인</a>
+            </div>
+            <div class="pizza-Content">
+                <div id="korean" class="pizzatext" style="font-size: 14px;">popolo pizza 포폴로피자</br></br>open 11:30</br>break 15:30 - 17:00</br>close 21:30</br>
+                <a id="korean" href="https://www.instagram.com/pizzeria_popolo/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
+                <a id="korean" href="https://naver.me/GNyUno66" style="color: #F24B2A; text-decoration: none;">naver place</a></br></br>포폴로피자를 운영하시는 사장님은 대한민국 최초로 </br> 나폴리피자대회 STG 월드챔피언이 되신 적이 있습니다. </br>벌써 맛에 대한 신뢰가 생기죠? 쉽게 맛볼 수 없는</br> 피자인데도 가격이 만 원대 후반~이만 원대 초반이라 </br>가성비까지 있어요. 다만 사장님께서는 종종 피자에 공부를 하러 </br>해외에 나가시곤 하니, 네이버와 인스타그램을 </br> 참고해 허탕을 치지 않게 조심하세요.</div>
+                <div id="pizza-map"></div>
+            </div>
+        </main>
+        <footer>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
+        </footer>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc"></script>
+        <script>
+            // Google Maps API 초기화 함수
+            function initMap() {
+                // 초기 위치 설정 (위도와 경도)
+                var myLatLng = {lat: 37.658365, lng: 126.773407};
+
+                // 지도 생성 및 센터 설정
+                var map = new google.maps.Map(document.getElementById('pizza-map'), {
+                    center: myLatLng,
+                    zoom: 15 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                });
+
+                // 마커 생성
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: '포폴로피자' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                });
+
+                infowindow = new google.maps.InfoWindow({
+                    content: '<strong>포폴로피자</strong><br>경기도 고양시 일산동구</br>정발산로 43-20'
+                });
+
+                marker.addListener('mouseover', function() {
+                    infowindow.open(map, marker);
+                });
+
+                // 마커에 이벤트 리스너 추가 (마우스 아웃 시)
+                marker.addListener('mouseout', function() {
+                    infowindow.close();
+                });
+            } 
+        </script>
+        <!-- Google Maps 초기화 -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc&callback=initMap">
+        </script>
+    </div>
+</body>
+</html>

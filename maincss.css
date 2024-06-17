@@ -12,6 +12,27 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: '양진체';
+    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WavvePADO-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/WavvePADO-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Oswald', sans-serif;
     margin-top: 50px;
@@ -137,7 +158,8 @@ footer {
 }
 
 #korean {
-    font-family: 'WAGURITTF';
+    font-family: 'WavvePADO-Regular';
+    letter-spacing: 0.05em;
 }
 
 .introMenu a {
@@ -156,7 +178,7 @@ footer {
 }
 
 .introContent {
-    font-size: 24px;
+    font-size: 23px;
     color: black;
     padding: 25px;
 }
@@ -344,4 +366,111 @@ textarea {
 #cancelButton:hover a {
     color: white;
     background-color: #F24B2A;
+}
+
+.arch-image {
+    display: block;
+    margin: 30px auto;
+    padding-left: 20px;
+}
+
+.arch-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 40px 80px / 80px 40px;
+}
+
+.cafeMenu {
+    text-align: left;
+    font-size: 18px;
+}
+
+.cafeMenu > a {
+    color:#F24B2A;
+}
+
+.resMenu {
+    text-align: left;
+    font-size: 18px;
+}
+
+.resMenu > a {
+    color:#F24B2A;
+}
+
+.cis-Content {
+    display: flex;
+}
+
+.better-Content {
+    display: flex;
+}
+
+#cis-map {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 40px 80px / 80px 40px;
+    padding-left: 20px;
+}
+
+.cis-text {
+    padding: 30px auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+.better-text {
+    padding: 30px auto;
+    text-align: right;
+    font-size: 14px;
+}
+
+#bettercoffee-map {
+    width: 600px;
+    height: 300px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 0%;
+    padding-left: 20px;
+}
+
+.pizza-Content {
+    display: flex;
+}
+
+.pizzatext {
+    padding: 30px auto;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+#pizza-map {
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 50%;
+    border: 3px solid #F24B2A;
+}
+
+.pizzatext img {
+    width: 200px;
+    height: 180px;
+}
+
+.jjambbong-image-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.jjambbong-image-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
