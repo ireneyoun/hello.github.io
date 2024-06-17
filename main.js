@@ -49,6 +49,15 @@ document.getElementById('logoutButton').addEventListener('click', function () {
     document.getElementById('password').value = "";
 });
 
+document.getElementById('writeButton').addEventListener('click', function () {
+    let username = getCookie("username");
+    if (!username) {
+        alert("로그인한 사용자만 글을 작성할 수 있습니다.");
+    } else {
+        window.location.href = 'boardwrite.html';
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     checkLogin();
 });
