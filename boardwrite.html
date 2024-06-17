@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2313621 윤다연</title>
+    <link rel="stylesheet" href="maincss.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Oswald:wght@200..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+</style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name"><a href="main.html">The Dachelin Guide</a></h1>
+            <nav class="menu-category">
+                <ul>
+                    <li><a class="menu">menu</a></li>
+                    <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
+                    <li><a id="korean" href="cafe.html" class="menu-content">카페</a></li>
+                    <li><a id="korean" href="restaurant.html" class="menu-content">식당</a></li>
+                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="form-container">
+            <form id="postForm">
+                <table>
+                    <tr>
+                        <td><label for="shopSelect">Select Shop</label></td>
+                        <td>
+                            <select id="shopSelect" name="shopSelect" required>
+                                <option value="shop1">시이즈</option>
+                                <option value="shop2">베럴커피</option>
+                                <option value="shop3">포폴로피자</option>
+                                <option value="shop4">짬뽕인</option>
+                                <option value="shop5">별미감자탕</option>
+                                <option value="shop6">요리미치훈</option>
+                                <option value="shop7">플레이그라운드브루어리</option>
+                                <option value="shop8">동경소나기</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="title">Title</label></td>
+                        <td><input type="text" id="title" name="title" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="content">Content</label></td>
+                        <td><textarea id="content" name="content" rows="4" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rating">Rating</label></td>
+                        <td>
+                            <select id="rating" name="rating" required>
+                                <option value="1">&#9733;</option>
+                                <option value="2">&#9733;&#9733;</option>
+                                <option value="3">&#9733;&#9733;&#9733;</option>
+                                <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                                <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="buttons">
+                            <button type="button" id="cancelButton"><a href="board.html">cancel</a></button>
+                            <button type="submit">upload</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>  
+        </main>
+        <footer>
+            <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
+            <a href="#" class="myname">2313621 DS YounDaYeon</a>
+        </footer>
+    </div>
+    <script>
+        const postForm = document.getElementById('postForm');
+        postForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            document.getElementById('postForm').reset();
+            alert('글이 성공적으로 작성되었습니다.');
+        });
+    </script>
+</body>
+</html>
