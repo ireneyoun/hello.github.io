@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="cafe-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
                     <li><a id="korean" href="myintro.html" class="menu-content">소개</a></li>
                     <li><a id="korean" href="cis.html" class="menu-content">카페</a></li>
                     <li><a id="korean" href="pizza.html" class="menu-content">식당</a></li>
-                    <li><a id="korean" href="bar.html" class="menu-content">주점</a></li>
+                    <li><a id="korean" href="playgb.html" class="menu-content">주점</a></li>
                     <li><a id="korean" href="board.html" class="menu-content">게시판</a></li>
                 </ul>
             </nav>
@@ -31,40 +31,44 @@
                 <a id="korean" href="gamja.html" style="color: #45a049; text-decoration: none;">별미감자탕</a></br>
                 <a id="korean" href="jjambbong.html" style="text-decoration: none;">짬뽕인</a>
             </div>
-            <div class="pizza-Content">
-                <div id="korean" class="pizzatext" style="font-size: 14px;">byeolmi gamjatang 별미감자탕</br></br>open 11:30</br>break 15:30 - 17:00</br>close 21:30</br>
-                <a id="korean" href="https://www.instagram.com/pizzeria_popolo/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
-                <a id="korean" href="https://naver.me/GNyUno66" style="color: #F24B2A; text-decoration: none;">naver place</a></br></br>포폴로피자를 운영하시는 사장님은 대한민국 최초로 </br> 나폴리피자대회 STG 월드챔피언이 되신 적이 있습니다. </br>벌써 맛에 대한 신뢰가 생기죠? 쉽게 맛볼 수 없는</br> 피자인데도 가격이 만 원대 후반~이만 원대 초반이라 </br>가성비까지 있어요. 다만 사장님께서는 종종 피자에 공부를 하러 </br>해외에 나가시곤 하니, 네이버와 인스타그램을 </br> 참고해 허탕을 치지 않게 조심하세요.</div>
-                <div id="pizza-map"></div>
+            <div class="gamja-Content">
+                <div id="korean" class="gamjatext" style="font-size: 14px;">byeolmi gamjatang 별미감자탕</br></br>open 11:00</br>break 15:00 - 17:00</br>close 21:30</br>토요일 정기휴무</br>
+                <a id="korean" href="https://naver.me/Fyexh197" style="color: #F24B2A; text-decoration: none;">naver place</a></div>
+                <div class="gamja-image"><img src="gamja2.jpeg"></div>
+                <div class="gamja-image"><img src="gamja3.jpeg"></div>
+                <div class="gamja-image"><img src="gamja.jpeg"></div>
+            </div>
+            <div class="gamjamap">
+                <div id="korean" class="gamjatext2">별미감자탕 또한 제가 사는 동네에</br> 있는 감자탕 전문점입니다. 위의 </br>사진을 보면 아시겠지만, 매우 자주 </br>방문한 음식점입니다. 개인 뚝배기에</br> 나오는 뼈해장국과 냄비에 끓여 먹는 </br>감자탕 메뉴가 대표적인데, 감자탕이 </br>제 입맛에는 더 맛있었습니다. </br>고기가 부드럽고 잡내도 나지 않아 </br>먹기 편하고, 얼큰하지만 맵지는 </br>않아 매운 음식을 잘 못 드시는 </br>분들도 즐길 수있는 음식입니다.</div>
+                <div id="gamja-map"></div>
             </div>
         </main>
         <footer>
             <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
             <a href="#" class="myname">2313621 DS YounDaYeon</a>
         </footer>
-
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqIOiDtl7UZ5MoV8np46Du0FJ_CMeiVlc"></script>
         <script>
             // Google Maps API 초기화 함수
             function initMap() {
                 // 초기 위치 설정 (위도와 경도)
-                var myLatLng = {lat: 37.658365, lng: 126.773407};
+                var myLatLng = {lat: 37.686006, lng: 126.719596};
 
                 // 지도 생성 및 센터 설정
-                var map = new google.maps.Map(document.getElementById('pizza-map'), {
+                var map = new google.maps.Map(document.getElementById('gamja-map'), {
                     center: myLatLng,
-                    zoom: 15 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                    zoom: 18 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
                 });
 
                 // 마커 생성
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    title: '포폴로피자' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                    title: '별미감자탕' // 마커에 마우스를 올렸을 때 나타나는 툴팁
                 });
 
                 infowindow = new google.maps.InfoWindow({
-                    content: '<strong>포폴로피자</strong><br>경기도 고양시 일산동구</br>정발산로 43-20'
+                    content: '<strong>별미감자탕</strong><br>경기도 고양시 일산서구</br>가좌 4로 4'
                 });
 
                 marker.addListener('mouseover', function() {

@@ -421,12 +421,16 @@ textarea {
     padding: 30px auto;
     text-align: left;
     font-size: 14px;
+    line-height: 1.2em;
+    margin-top: 30px;
 }
 
 .better-text {
     padding: 30px auto;
     text-align: right;
     font-size: 14px;
+    line-height: 1.2em;
+    margin-top: 30px;
 }
 
 #bettercoffee-map {
@@ -434,8 +438,6 @@ textarea {
     height: 300px;
     display: block;
     margin: 30px auto;
-    border-radius: 0%;
-    padding-left: 20px;
 }
 
 .pizza-Content {
@@ -447,6 +449,7 @@ textarea {
     text-align: left;
     font-size: 14px;
     margin-top: 30px;
+    line-height: 1.2em;
 }
 
 #pizza-map {
@@ -456,11 +459,6 @@ textarea {
     margin: 30px auto;
     border-radius: 50%;
     border: 3px solid #F24B2A;
-}
-
-.pizzatext img {
-    width: 200px;
-    height: 180px;
 }
 
 .jjambbong-image-container {
@@ -473,4 +471,183 @@ textarea {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+.gamjatext {
+    padding: 30px auto;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 1.2em;
+}
+
+.gamja-image img {
+    padding: 30px auto;
+    margin-top: 30px;
+    width: 170px;
+    height: 170px;
+    border-radius: 40px 80px / 80px 40px;
+}
+
+.gamja-Content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gamjatext2 {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#gamja-map {
+    width:560px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.gamjamap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.barMenu {
+    text-align: left;
+    font-size: 18px;
+}
+
+.barMenu > a {
+    color:#F24B2A;
+}
+
+.rain-Content {
+    display: flex;
+}
+
+.rain-text {
+    padding: 30px auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.rain-table {
+    display: block;
+    margin: 30px auto;
+    padding-left: 20px;
+    width: 700px; 
+    height: 400px;
+    border-collapse: collapse;
+}
+
+.rain-table tr {
+    height: 190px;
+}
+
+.rain-table > table > th, td {
+    padding: 0;
+    text-align: justify;
+}
+
+#rain-map {
+    width: auto;
+    height: 200px;
+}
+
+.rain-bgimg {
+    background-image: url('dk.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+}
+
+.raintext2 {
+    font-size: 14px;
+    display: block;
+    padding: 9px;
+}
+
+.hun-text {
+    padding: 30px auto;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.huntext2 {
+    width: 400px;
+    text-align: left;
+}
+
+.hun-image img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-top: 20px;
+}
+
+.hun-image {
+    display: flex;
+    justify-content:space-between;
+}
+
+.play-Content {
+    display: flex;
+}
+
+.play-text {
+    padding: 30px auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-top: 30px;
+}
+
+.play-table {
+    display: block;
+    margin: 30px auto;
+    padding-left: 20px;
+    width: 600px; 
+    height: 400px;
+}
+
+.play-table tr {
+    height: 190px;
+}
+
+.play-table > table > th, td {
+    padding: 0;
+    text-align: justify;
+}
+
+.play-bgimg {
+    background-image: url('playground.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+}
+
+.play-bgimg2 {
+    background-image: url('playground3.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+}
+
+.play-bgimg3 {
+    background-image: url('playground2.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+}
+
+.playtext2 {
+    font-size: 14px;
+    display: block;
+    padding: 9px;
 }

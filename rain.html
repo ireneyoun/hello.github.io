@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="cafe-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,19 +25,29 @@
                 </ul>
             </nav>
         </header>
-        <main class="cafe-menu">
-            <div class="cafeMenu">
-                <a id="korean" href="cis.html" style=" text-decoration: none;">시이즈</a></br>
-                <a id="korean" href="bettercoffee.html" style="color: #45a049; text-decoration: none;">베럴커피</a>
+        <main class="bar-menu">
+            <div class="barMenu">
+                <a id="korean" href="playgb.html" style="text-decoration: none;">플레이그라운드 브루어리 탭하우스</a></br>
+                <a id="korean" href="rain.html" style="color: #45a049; text-decoration: none;">동경소나기</a></br>
+                <a id="korean" href="hun.html" style="text-decoration: none;">요리미치훈</a>
             </div>
-            <div class="better-Content">
-                <div id="bettercoffee-map"></div>
-                <div id="korean" class="better-text">better coffee</br>베럴커피</br></br>open 09:00</br>close 23:00</br></a>
-                    <a id="korean" href="https://www.instagram.com/better.coffee_gajwa/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
-                    <a id="korean" href="https://naver.me/5JJbAR4E" style="color: #F24B2A; text-decoration: none;">naver place</a>
+            <div class="rain-Content">
+                <div class="rain-text">
+                    <div id="korean" class="pizzatext" style="font-size: 14px;">tokyoshower </br>동경소나기</br></br>open 16:00</br>close 02:00</br>
+                    <a id="korean" href="https://naver.me/GLKABfBW" style="color: #F24B2A; text-decoration: none;">naver place</a></div>
+                </div>
+                <div class="rain-table">
+                    <table>
+                        <tr>
+                            <td><div id="rain-map"></div></td>
+                            <td rowspan="2" class="rain-bgimg"></td>
+                        </tr>
+                        <tr>
+                            <td><span id="korean" class="raintext2">일산 고양시 라페스타에 위치한 이자카야입니다. 동경소나기는 일본의 전통적인 이자카야 분위기를 재현하여, 마치 일본에 온 것 같은 느낌을 줍니다. 또한 사시미, 스시, 나베, 야키토리 등 다양한 일본 요리를 맛볼 수 있고, 신선한 재료를 사용한 계절 특선 요리도 있습니다. 술 종류도 다양해 일식이 당길 때 방문하면 좋을 듯합니다.</span></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div id="korean" style="font-size: 14px; text-align: justify;">베럴커피는 제가 사는 동네에 위치한 카페입니다. 베럴커피의 시그니처 메뉴는 아인슈페너와 베럴크림라테인데요. 이들에 올라가는 크림이 매우 쫀득한 것이 특징이에요. 크림을 단단하게 만들기 위해서는 아주 오랜 시간 저어야 하는데, 베럴커피는 갈 때마다 크림이 무른 적이 없었습니다. 또, 베럴커피에서는 다양한 구움과자들도 팔고 있어요. 저희 동네의 자랑입니다.</div>
         </main>
         <footer>
             <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
@@ -49,23 +59,23 @@
             // Google Maps API 초기화 함수
             function initMap() {
                 // 초기 위치 설정 (위도와 경도)
-                var myLatLng = {lat: 37.686151, lng: 126.719474};
+                var myLatLng = {lat: 37.664457, lng: 126.765845};
 
                 // 지도 생성 및 센터 설정
-                var map = new google.maps.Map(document.getElementById('bettercoffee-map'), {
+                var map = new google.maps.Map(document.getElementById('rain-map'), {
                     center: myLatLng,
-                    zoom: 18 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                    zoom: 15 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
                 });
 
                 // 마커 생성
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    title: '베럴커피' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                    title: '동경소나기' // 마커에 마우스를 올렸을 때 나타나는 툴팁
                 });
 
                 infowindow = new google.maps.InfoWindow({
-                    content: '<strong>베럴커피</strong><br>경기도 고양시 일산서구</br>가좌동 번지 1층 394-9 01호'
+                    content: '<strong>동경소나기</strong><br>경기도 고양시 일산동구</br>고봉로 32-12 로데오플러스 2층'
                 });
 
                 marker.addListener('mouseover', function() {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="cafe-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,19 +25,30 @@
                 </ul>
             </nav>
         </header>
-        <main class="cafe-menu">
-            <div class="cafeMenu">
-                <a id="korean" href="cis.html" style=" text-decoration: none;">시이즈</a></br>
-                <a id="korean" href="bettercoffee.html" style="color: #45a049; text-decoration: none;">베럴커피</a>
+        <main class="bar-menu">
+            <div class="barMenu">
+                <a id="korean" href="playgb.html" style="color: #45a049; text-decoration: none;">플레이그라운드 브루어리 탭하우스</a></br>
+                <a id="korean" href="rain.html" style="text-decoration: none;">동경소나기</a></br>
+                <a id="korean" href="hun.html" style="text-decoration: none;">요리미치훈</a>
             </div>
-            <div class="better-Content">
-                <div id="bettercoffee-map"></div>
-                <div id="korean" class="better-text">better coffee</br>베럴커피</br></br>open 09:00</br>close 23:00</br></a>
-                    <a id="korean" href="https://www.instagram.com/better.coffee_gajwa/" style="color: #F24B2A; text-decoration: none;">instagram</a></br>
-                    <a id="korean" href="https://naver.me/5JJbAR4E" style="color: #F24B2A; text-decoration: none;">naver place</a>
+            <div class="play-Content">
+                <div class="play-text">
+                    <div id="korean" class="playtext" style="font-size: 14px;">playground brewery </br>taphouse</br>플레이그라운드 브루어리</br>탭하우스</br></br>경기 고양시 일산서구 </br>한류월드로 300 1층 </br>1204호, 1205호</br>open 16:00</br>close 02:00</br>
+                    <a id="korean" href="https://naver.me/5fPBYPdU" style="color: #F24B2A; text-decoration: none;">naver place</a></div>
+                </div>
+                <div class="play-table">
+                    <table>
+                        <tr>
+                            <td><div id="korean" class="playtext2" style="text-align: justify;">플레이그라운드브루어리 탭하우스는 일산에 위치한 크래프트 맥주 전문점입니다. 플레이그라운드브루어리라는 자체 양조장에서 생산된 수제 맥주를 맛있는 안주와 함께 즐길 수 있는 곳입니다. IPA, 페일 에일, 스타우트 등 여러 가지 스타일의 맥주를 맛볼 수 있고, 캔맥주를 구입하여 집에서도 즐길 수 있습니다. 안주 전문이 아님에도 불구하고 안주의 퀄리티나 맛이 매우 훌륭해 맥주와도 잘 어울립니다. </div></td>
+                            <td class="play-bgimg"></td>
+                        </tr>
+                        <tr>
+                            <td class="play-bgimg2"></td>
+                            <td class="play-bgimg3"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div id="korean" style="font-size: 14px; text-align: justify;">베럴커피는 제가 사는 동네에 위치한 카페입니다. 베럴커피의 시그니처 메뉴는 아인슈페너와 베럴크림라테인데요. 이들에 올라가는 크림이 매우 쫀득한 것이 특징이에요. 크림을 단단하게 만들기 위해서는 아주 오랜 시간 저어야 하는데, 베럴커피는 갈 때마다 크림이 무른 적이 없었습니다. 또, 베럴커피에서는 다양한 구움과자들도 팔고 있어요. 저희 동네의 자랑입니다.</div>
         </main>
         <footer>
             <a href="mailto:dsyoun@sookmyung.ac.kr" class="email">dsyoun@sookmyung.ac.kr</a>
@@ -49,23 +60,23 @@
             // Google Maps API 초기화 함수
             function initMap() {
                 // 초기 위치 설정 (위도와 경도)
-                var myLatLng = {lat: 37.686151, lng: 126.719474};
+                var myLatLng = {lat: 37.664457, lng: 126.765845};
 
                 // 지도 생성 및 센터 설정
-                var map = new google.maps.Map(document.getElementById('bettercoffee-map'), {
+                var map = new google.maps.Map(document.getElementById('rain-map'), {
                     center: myLatLng,
-                    zoom: 18 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
+                    zoom: 15 // 초기 줌 레벨 설정 (1:세계 전체, 10:도시, 15: 건물, 20: 건물 안)
                 });
 
                 // 마커 생성
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    title: '베럴커피' // 마커에 마우스를 올렸을 때 나타나는 툴팁
+                    title: '동경소나기' // 마커에 마우스를 올렸을 때 나타나는 툴팁
                 });
 
                 infowindow = new google.maps.InfoWindow({
-                    content: '<strong>베럴커피</strong><br>경기도 고양시 일산서구</br>가좌동 번지 1층 394-9 01호'
+                    content: '<strong>동경소나기</strong><br>경기도 고양시 일산동구</br>고봉로 32-12 로데오플러스 2층'
                 });
 
                 marker.addListener('mouseover', function() {
@@ -85,3 +96,4 @@
     </div>
 </body>
 </html>
+    
